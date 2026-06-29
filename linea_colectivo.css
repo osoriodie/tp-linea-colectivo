@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;600;700&display=swap');
 
 * {
     margin: 0;
@@ -109,15 +109,31 @@ h2 {
     padding-left: 1.2rem;
 }
 
+/* --- SECCIÓN RECORRIDO CORREGIDA --- */
+
+.imagen-recorrido {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 2.5rem; /* Separación de la cuadrícula inferior */
+    border-radius: 4px;
+}
+
 .recorrido-flex {
     display: flex;
-    gap: 2rem;
-    align-items: stretch;
+    gap: 3rem;              /* Espacio óptimo entre columnas */
+    align-items: flex-start; /* Evita que el bloque de texto derecho se estire */
 }
 
 .lista-paradas {
-    flex: 1;
+    flex: 3;                /* Toma más proporción del ancho asignado */
 }
+
+.bloque-recorrido-texto {
+    flex: 2;                /* Ajusta la descripción al espacio restante */
+}
+
+/* ----------------------------------- */
 
 .parada-item {
     display: flex;
@@ -136,7 +152,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Impide que el círculo numérico se deforme */
 }
 
 .parada-item h4 {
@@ -204,6 +220,7 @@ h2 {
 .alerta-accesibilidad li {
     margin-bottom: 0.5rem;
 }
+
 footer {
     background-color: #1a1a2e;
     color: #a0aec0;
